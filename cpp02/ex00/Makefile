@@ -1,5 +1,5 @@
 NAME = ex00
-G++ = G++
+G++ = g++
 Flags = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp Fixed.cpp 

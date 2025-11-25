@@ -1,8 +1,8 @@
-NAME = harlFilter
-G++ = G++
+NAME = ex05
+G++ = g++
 Flags = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp
+SRCS = main.cpp Harl.cpp
 OBJDIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
