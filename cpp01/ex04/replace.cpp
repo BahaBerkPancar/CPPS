@@ -1,25 +1,25 @@
-#include "replace.hpp"
+#include "Replace.hpp"
 
-replace::replace(std::string first_string, std::string replace)
+Replace::Replace(std::string first_string, std::string replace)
 {
 	this->first_string = first_string;
 	this->replace_string = replace;
 }
 
-replace::~replace()
+Replace::~Replace()
 {}
 
-void replace::open_file(std::string file_name)
+void Replace::open_file(std::string file_name)
 {
 	input.open(file_name);
 	if(!input.is_open())
-		std::cout << "i cant open " << file_name << std::endl;
+		std::cout << "Can't open " << file_name << std::endl;
 	output.open(file_name + ".replace");
 	if(!output.is_open())
-		std::cout << "i cant open " << file_name + ".replace" << std::endl;
+		std::cout << "Can't open " << file_name + ".replace" << std::endl;
 }
 
-void replace::replace_strings()
+void Replace::replace_strings()
 {
     std::string buffer;
 
@@ -39,7 +39,7 @@ void replace::replace_strings()
         output << result << '\n';
     }
 }
-void replace::close_file()
+void Replace::close_file()
 {
 	input.close();
 	output.close();

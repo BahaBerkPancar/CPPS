@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 
-class replace {
+class Replace {
 	private:
 		std::string first_string;
 		std::ifstream input;
@@ -13,8 +13,8 @@ class replace {
 	public:
 		std::string buffer;
 		std::string replace_string;
-		replace(std::string first_string, std::string replace);
-		~replace();
+		Replace(std::string first_string, std::string replace);
+		~Replace();
 		void open_file(std::string file_name);
 		void replace_strings();
 		void close_file();

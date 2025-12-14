@@ -2,7 +2,7 @@ NAME = ex04
 G++ = g++
 Flags = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp replace.cpp
+SRCS = main.cpp Replace.cpp
 OBJDIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
