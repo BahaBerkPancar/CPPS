@@ -1,11 +1,9 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed() : fixed_point(0){
-	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int i) {
-    std::cout << "Int constructor called" << std::endl;
     this->fixed_point = i * (1 << bits);
 }
 
@@ -14,15 +12,12 @@ Fixed::Fixed(const float floating_point){
 }
 
 Fixed::~Fixed(){
-	std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed& fixed) : fixed_point(fixed.fixed_point){
-	std::cout << "Copy Constructor called" << std::endl;
 }
 
 Fixed& Fixed:: operator= (const Fixed& fixed){
-	std::cout << "Copy Assignment operator called" << std::endl;
 	if(this == &fixed)
 		return(*this);
 	this->fixed_point = fixed.fixed_point;
@@ -30,12 +25,10 @@ Fixed& Fixed:: operator= (const Fixed& fixed){
 }
 
 int Fixed::getRawBits(void) const{
-	std::cout << "getRawBits member function called" << std::endl;
 	return(this->fixed_point);
 }
 
 void Fixed::setRawBits(int const raw){
-	std::cout << "setRawBits member function called" << std::endl;
 	this->fixed_point = raw;
 }
 
@@ -77,20 +70,19 @@ bool	Fixed::operator!=(const Fixed& fixed) const{
 		return (this->fixed_point != fixed.fixed_point);
 }
 
-Fixed	Fixed::operator+(const Fixed& fixed){
+Fixed	Fixed::operator+(const Fixed& fixed) const{
 	return (Fixed(this->toFloat() + fixed.toFloat()));
 }
 
-Fixed	Fixed::operator-(const Fixed& fixed){
+Fixed	Fixed::operator-(const Fixed& fixed) const{
 	return(Fixed(this->toFloat() - fixed.toFloat()));
 }
 
-Fixed Fixed::operator*(const Fixed& fixed) {
+Fixed Fixed::operator*(const Fixed& fixed) const {
     return Fixed(this->toFloat() * fixed.toFloat());
 }
 
-
-Fixed Fixed::operator/(const Fixed& fixed){
+Fixed Fixed::operator/(const Fixed& fixed) const{
     return Fixed(this->toFloat() / fixed.toFloat());
 }
 
@@ -116,18 +108,18 @@ Fixed& Fixed::operator--(){
 	return (*this);
 }
 
-const Fixed& Fixed::min(const Fixed& first, const Fixed& second){
-	return(first.fixed_point < second.fixed_point ? first : second);
+const Fixed& Fixed::min(const Fixed& first, const Fixed& second) {
+    return (first.getRawBits() < second.getRawBits() ? first : second);
 }
 
-const Fixed& Fixed::max(const Fixed& first, const Fixed& second){
-	return (first.fixed_point > second.fixed_point) ? first : second;
+const Fixed& Fixed::max(const Fixed& first, const Fixed& second) {
+    return (first.getRawBits() > second.getRawBits() ? first : second);
 }
 
-Fixed& Fixed::min(Fixed& first, Fixed& second){
-	return(first.fixed_point < second.fixed_point ? first : second);
+Fixed& Fixed::min(Fixed& first, Fixed& second) {
+    return (first.getRawBits() < second.getRawBits() ? first : second);
 }
 
-Fixed& Fixed::max(Fixed& first, Fixed& second){
-	return (first.fixed_point > second.fixed_point) ? first : second;
+Fixed& Fixed::max(Fixed& first, Fixed& second) {
+    return (first.getRawBits() > second.getRawBits() ? first : second);
 }

@@ -1,8 +1,8 @@
-NAME = ex01
-G++ = G++
+NAME = ex03
+G++ = g++
 Flags = -Wall -Wextra -Werror -std=c++98
 
-SRCS = phonebook.cpp
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
 OBJDIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 

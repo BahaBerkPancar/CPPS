@@ -1,8 +1,8 @@
-NAME = megaphone
-G++ = G++
+NAME = diamond_trap
+G++ = g++
 Flags = -Wall -Wextra -Werror -std=c++98
 
-SRCS = megaphone.cpp
+SRCS = main.cpp ClapTrap.cpp FragTrap.cpp
 OBJDIR = obj
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 

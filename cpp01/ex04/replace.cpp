@@ -13,10 +13,17 @@ void Replace::open_file(std::string file_name)
 {
 	input.open(file_name);
 	if(!input.is_open())
+    {
 		std::cout << "Can't open " << file_name << std::endl;
+        exit(0);
+    }
 	output.open(file_name + ".replace");
 	if(!output.is_open())
+    {
 		std::cout << "Can't open " << file_name + ".replace" << std::endl;
+        input.close();
+        exit(0);
+    }
 }
 
 void Replace::replace_strings()

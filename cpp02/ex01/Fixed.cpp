@@ -10,6 +10,7 @@ Fixed::Fixed(const int i) {
 }
 
 Fixed::Fixed(const float floating_point){
+    std::cout << "Float constructor called" << std::endl;
 	this->fixed_point = roundf(floating_point * (1 << bits));
 }
 
