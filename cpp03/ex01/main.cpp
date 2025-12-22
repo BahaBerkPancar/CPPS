@@ -2,8 +2,8 @@
 
 int main()
 {
-    ScavTrap scav("SC4V");
-    scav.attack("Bandit");
+    ScavTrap scav("Harvey");
+    scav.attack("Mike");
     scav.guardGate();
     scav.takeDamage(30);
     scav.beRepaired(20);

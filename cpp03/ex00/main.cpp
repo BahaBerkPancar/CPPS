@@ -1,16 +1,15 @@
 #include "ClapTrap.hpp"
 
 int main() {
-    ClapTrap clap("CL4P-TP");
+    ClapTrap clap("Harvey");
 
-    clap.attack("Bandit");
+    clap.attack("Luis");
     clap.takeDamage(3);
     clap.beRepaired(5);
 
-    ClapTrap clap2("FR4G-TP");
-    clap2.attack("Skag");
+    ClapTrap clap2("Mike");
+    clap2.attack("Jessica");
     clap2.takeDamage(7);
     clap2.beRepaired(2);
-
     return 0;
 }

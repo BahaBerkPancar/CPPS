@@ -3,7 +3,7 @@ G++ = g++
 Flags = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
-OBJDIR = obj
+OBJDIR = .obj
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 all: $(NAME)

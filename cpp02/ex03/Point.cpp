@@ -9,8 +9,7 @@ Point::Point(const Point &Point) : _x(Point._x), _y(Point._y) {}
 
 Point &Point::operator=(const Point &Point)
 {
-    if (this != &Point)
-        return *this;
+    (void)Point;
     return *this;
 }
 

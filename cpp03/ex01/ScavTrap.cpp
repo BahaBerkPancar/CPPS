@@ -1,7 +1,7 @@
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(const std::string& name): ClapTrap(name){
-	Hit_points = 100;
+    Hit_points = 100;
     Energy_points = 50;
     Attack_damage = 20;
     std::cout << "ScavTrap " << name << " created!" << std::endl;

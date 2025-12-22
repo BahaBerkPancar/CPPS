@@ -9,6 +9,16 @@ ClapTrap::~ClapTrap(){
     std::cout << "ClapTrap " << name << " destroyed!" << std::endl;
 }
 
+ClapTrap& ClapTrap::operator=(const ClapTrap& other){
+    if (this != &other) {
+        name = other.name;
+        Hit_points = other.Hit_points;
+        Energy_points = other.Energy_points;
+        Attack_damage = other.Attack_damage;
+    }
+    return *this;
+}
+
 void ClapTrap::attack(const std::string& target){
     if (Energy_points == 0 || Hit_points == 0) {
         std::cout << "ClapTrap " << name << " cannot attack!" << std::endl;
