@@ -2,8 +2,8 @@ NAME = ex02
 G++ = g++
 Flags = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp ClapTrap.cpp FragTrap.cpp
-OBJDIR = obj
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+OBJDIR = .obj
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 all: $(NAME)

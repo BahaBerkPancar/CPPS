@@ -8,6 +8,10 @@ Animal::Animal(std::string type) : type(type){
 	std::cout << "Animal has been created" << std::endl;
 }
 
+Animal::Animal(const Animal& other) : type(other.type) {
+    std::cout << "Animal copy constructor called" << std::endl;
+}
+
 Animal::~Animal(){
 	std::cout << "Animal has been destroyed" << std::endl;
 }
@@ -19,13 +23,9 @@ Animal& Animal::operator=(const Animal& other) {
 }
 
 void Animal::makeSound() const{
-	if (this->type == "Dog")
-		std::cout << "Bark Bark Woof Woof" << std::endl;
-	else if (this->type == "Cat")
-		std::cout << "meow meow" << std::endl;
-	else
-		std::cout << this->type << " noises" << std::endl;
+	std::cout << "Animal makes a sound" << std::endl;
 }
+
 std::string Animal::getType() const{
 	return(this->type);
 }
