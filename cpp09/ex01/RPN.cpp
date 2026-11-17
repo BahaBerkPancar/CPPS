@@ -56,9 +56,8 @@ void RPN::performOperation(std::stack<int> &stack, char c)
 	case '/':
 		if (b == 0)
 			throw std::runtime_error("Error: undefined division");
-		else
-			stack.push(a / b);
-			break;
+		stack.push(a / b);
+		break;
 	default:
 		throw std::runtime_error("Error: Unknown operator");
 	}

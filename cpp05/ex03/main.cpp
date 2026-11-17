@@ -16,11 +16,19 @@ int main() {
     
     
     rrf = someRandomIntern.makeForm("shrubbery creation", "target");
-    president.signForm(*rrf);
-    president.executeForm(*rrf);
     if (rrf) {
+        president.signForm(*rrf);
+        president.executeForm(*rrf);
         delete rrf;
     }
-    
+
+    rrf = someRandomIntern.makeForm("coffee request", "Bender");
+    if (rrf) {
+        std::cout << "unexpected: unknown form was created" << std::endl;
+        delete rrf;
+    } else {
+        std::cout << "makeForm returned NULL for the unknown form" << std::endl;
+    }
+
     return 0;
 }

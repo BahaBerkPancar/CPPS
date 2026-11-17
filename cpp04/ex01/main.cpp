@@ -25,11 +25,23 @@ int main()
         Dog tmp = basic;
     }
 
+    std::cout << "--- deep copy demo ---" << std::endl;
     Cat *originalCat = new Cat();
-    Cat *copyCat;
-    copyCat = originalCat;
+    originalCat->getBrain()->setIdea(0, "chase the mouse");
+
+    Cat *copyCat = new Cat(*originalCat);
+    Cat assignedCat;
+    assignedCat = *originalCat;
+
+    originalCat->getBrain()->setIdea(0, "sleep all day");
+
+    std::cout << "original idea: " << originalCat->getBrain()->getIdea(0) << std::endl;
+    std::cout << "copy idea:     " << copyCat->getBrain()->getIdea(0) << std::endl;
+    std::cout << "assigned idea: " << assignedCat.getBrain()->getIdea(0) << std::endl;
+
     delete originalCat;
     copyCat->makeSound();
+    delete copyCat;
 
     return 0;
 }
