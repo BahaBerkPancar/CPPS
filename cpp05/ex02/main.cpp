@@ -10,13 +10,13 @@ int main()
         Bureaucrat president("President", 1);
         Bureaucrat intern("Intern", 150);
         
-        ShrubberyCreationForm a("home");
         RobotomyRequestForm B("Bender");
         PresidentialPardonForm c("Ford Prefect");
-        intern.signForm(a);
-        intern.executeForm(a);
+        ShrubberyCreationForm a("home");
         president.signForm(a);
         president.executeForm(a);
+        intern.signForm(a);
+        intern.executeForm(a);
         president.signForm(B);
         president.executeForm(B);
         president.executeForm(B);

@@ -25,9 +25,11 @@ int main()
         Dog tmp = basic;
     }
 
-    Cat originalCat;
-    Cat copyCat;
+    Cat *originalCat = new Cat();
+    Cat *copyCat;
     copyCat = originalCat;
+    delete originalCat;
+    copyCat->makeSound();
 
     return 0;
 }

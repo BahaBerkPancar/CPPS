@@ -42,7 +42,9 @@ std::ostream& operator<<(std::ostream& os, const AForm& form)
     if (form.getIsSigned())
         os <<"yes";
     else
+    {
         os<< "no";
         os << ", sign-grade: " << form.getSignGrade() << ", exec-grade: " << form.getExecuteGrade() << ")";
+    }
     return os;
 }
