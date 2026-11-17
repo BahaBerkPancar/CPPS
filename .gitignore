@@ -1,0 +1,18 @@
+.DS_Store
+.vscode/
+.obj/
+*.o
+*_shrubbery
+
+# binaries produced by the exercise Makefiles
+cpp*/ex*/ex0[0-3]
+cpp*/ex*/ClapTrap
+cpp*/ex*/ScavTrap
+cpp*/ex*/FragTrap
+cpp*/ex*/DiamondTrap
+cpp*/ex*/easyfind
+cpp*/ex*/span
+cpp*/ex*/mutantstack
+cpp*/ex*/btc
+cpp*/ex*/RPN
+cpp*/ex*/PmergeMe
